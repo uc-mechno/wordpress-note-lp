@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="postlist">
+<main class="mymain postlist">
 
 <h1><?php the_archive_title(); ?></h1>
 

@@ -11,7 +11,7 @@
 <?php wp_body_open(); ?>
 
 
-<header>
+<header class="myheader">
 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 <?php bloginfo( 'name' ); ?>
 </a>
