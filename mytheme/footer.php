@@ -1,4 +1,4 @@
-<footer>
+<footer class="myfooter">
 <?php bloginfo( 'name' ); ?>
 </footer>
 
