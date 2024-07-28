@@ -62,11 +62,11 @@ body {
     [foot] 100px;
   grid-row-gap: 50px;
   row-gap: 50px;
-}
 
-body > * {
-  grid-column: 2 / -2;
-  min-width: 0;
+   > * {
+    grid-column: 2 / -2;
+    min-width: 0;
+  }
 }
 
 /* ヘッダー */
@@ -319,23 +319,22 @@ body {
 }
 
 .postlist article:first-of-type {
-	grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 .postlist article:first-of-type h2 {
-	padding: 15px 10px;
-	font-size: var(--f2);
+  padding: 15px 10px;
+  font-size: var(--f2);
 }
 
 .postlist article:first-of-type img {
-	height: var(--imgh);
+  height: var(--imgh);
 }
 
 .postlist article img {
-	height: calc( var(--imgh) / 2 );
-	object-fit: cover;
+  height: calc(var(--imgh) / 2);
+  object-fit: cover;
 }
-
 
 /* ページネーション */
 .pagination {
