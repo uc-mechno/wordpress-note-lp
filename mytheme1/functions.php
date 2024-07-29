@@ -10,7 +10,7 @@ function mytheme_setup() {
 	add_theme_support( 'title-tag' );
 
 	// HTML5対応
-	add_theme_support( 'html5', array( 'style', 'script' ) );	
+	add_theme_support( 'html5', array( 'style', 'script' ) );
 
 	// アイキャッチ画像
 	add_theme_support( 'post-thumbnails' );
@@ -29,6 +29,9 @@ function mytheme_setup() {
 
 	// 埋め込みコンテンツのレスポンシブ化
 	add_theme_support( 'responsive-embeds' );
+
+  	// 幅広・全幅
+	add_theme_support( 'align-wide' );
 
 }
 add_action( 'after_setup_theme', 'mytheme_setup' );
@@ -70,7 +73,7 @@ function mytheme_sri( $html, $handle ) {
 		return str_replace(
 			'/>',
 			'integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"' . ' />',
-			$html 
+			$html
 		);
 	}
 	return $html;

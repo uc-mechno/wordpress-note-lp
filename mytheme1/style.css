@@ -459,6 +459,15 @@ body::after {
 	box-sizing: inherit;
 }
 
+/* 幅広・全幅 */
+.alignwide {
+	grid-column: 2 / -2;
+}
+
+.alignfull {
+	grid-column: 1 / -1;
+}
+
 /* PC版 */
 @media (min-width: 1024px) {
 

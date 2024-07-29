@@ -15,6 +15,13 @@ p {
 }
 
 .wp-block {
-	max-width: 760px;
+	max-width: 614px;
 }
 
+.wp-block[data-align="wide"] {
+	max-width: 819px;
+}
+
+.wp-block[data-align="full"] {
+	max-width: none;
+}
