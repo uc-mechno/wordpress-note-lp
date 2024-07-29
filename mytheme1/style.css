@@ -51,13 +51,12 @@ a:hover {
 	opacity: 0.8;
 }
 
-
 /* グリッド */
 body {
 	display: grid;
-	grid-template-columns: 
-		10px 1fr 10px;
-	grid-template-rows: 
+	grid-template-columns:
+    var(--side) var(--side) 2fr var(--side) var(--side);
+	grid-template-rows:
 		[head] 100px
 		[main] auto
 		[aside] auto
@@ -113,6 +112,14 @@ body::before {
 /* コンテンツ */
 .mymain {
 	grid-row: main;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+.mymain > * {
+	grid-column: 1 / -1;
+	min-width: 0;
 }
 
 h1 {
@@ -418,7 +425,13 @@ body::after {
 }
 
 .myblocks {
-	display: flow-root;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+.myblocks > * {
+  grid-column: 3 / -3;
+  min-width: 0;
 }
 
 .myblocks::after { /* 未対応ブラウザ用の設定 */
@@ -449,25 +462,9 @@ body::after {
 /* PC版 */
 @media (min-width: 1024px) {
 
-body {
-	grid-template-columns: 0.2fr repeat(6,1fr) 0.2fr;
-	grid-template-rows: 
-		[head] 100px
-		[main aside] auto
-		[foot] 100px;
-	grid-column-gap: 5%;
-	column-gap: 5%;
-}
-
-.mymain {
-	grid-column: 2 / span 4;
-	align-self: start;
-}
-
-.myaside {
-	grid-column: 6 / span 2;
-	align-self: start;
-}
+  body {
+    --side: 10vw;
+  }
 
 .postlist {
 	--imgh: 31vw;
@@ -478,5 +475,3 @@ body {
 }
 
 }
-
-
