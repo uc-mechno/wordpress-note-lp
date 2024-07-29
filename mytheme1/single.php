@@ -6,11 +6,13 @@
 
 <article <?php post_class( 'myblocks' ); ?>>
 
+<?php if ( !has_block( 'image' ) ): ?>
 <?php if( has_post_thumbnail() ): ?>
 <figure class="myfigure">
 <?php the_post_thumbnail(); ?>
 </figure>
 <?php endif; ?>
+<?php endif;?>
 
 <?php the_category(); ?>
 
