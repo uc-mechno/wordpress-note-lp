@@ -305,11 +305,16 @@ body::after {
 }
 
 .postlist {
+	grid-column: 2 / -2;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 15px;
 	gap: 15px;
 	--imgh: 56vw;
+}
+
+.postlist > * {
+	grid-column: auto;
 }
 
 .postlist article {
