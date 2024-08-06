@@ -154,26 +154,27 @@ p {
 
 /* サイドメニュー */
 .myaside {
+  grid-column: 1 / -1;
 	grid-row: aside;
 	display: grid;
 	grid-row-gap: 30px;
 	row-gap: 30px;
-}
-
-.myaside section {
-	border: solid 1px #dddddd;
-	padding: 15px;
-	box-shadow: 0 3px 5px #dddddd;
+  background-color: #1b5e92;
+  padding: 60px var(--side);
 }
 
 .myaside section h2 {
-	border-bottom: solid 1px #dddddd;
+	border-bottom: solid 2px #dddddd;
 	padding-bottom: 20px;
 	margin-bottom: 30px;
 	font-size: var(--f4);
 	font-weight: normal;
-	color: #1b5e92;
-	text-align: center;
+	color: #ffffff;
+	text-align: left;
+}
+
+.myaside section a {
+	color: #ffffff;
 }
 
 .myaside section ul {
@@ -244,8 +245,11 @@ body::after {
 	word-wrap: normal !important;
 }
 
-
 /* 記事：前後の記事へのリンク */
+.post-navigation {
+	grid-column: 3 / -3;
+}
+
 .post-navigation .nav-links {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -475,8 +479,29 @@ body::after {
     --side: 10vw;
   }
 
+  .myheader {
+    grid-column: 2 / -2;
+    justify-self: start;
+  }
+
+  body::before {
+    margin-bottom: 0;
+  }
+
 .postlist {
 	--imgh: 31vw;
+}
+
+.mynav {
+	grid-column: 2 / -2;
+	justify-self: end;
+	align-self: center;
+}
+
+.myaside {
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 40px;
+	column-gap: 40px;
 }
 
 .postlist h1 {
